@@ -1,4 +1,4 @@
-CHART_NAME := otel-lgtm
+CHART_NAME := lgtm
 
 .PHONY: deploy
 deploy:
@@ -6,7 +6,7 @@ deploy:
 
 .PHONY: delete
 delete:
-	@helm delete $(CHART_NAME) || true
+	@helm delete $(CHART_NAME) --wait || true
 
 .PHONY: expose
 expose:
