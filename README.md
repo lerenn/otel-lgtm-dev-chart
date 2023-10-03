@@ -30,3 +30,13 @@ opentelemetry exporters:
 
 **Important**: for ease of use, TLS is disabled, you should add an argument to
 enable the insecure connection.
+
+### Display the Grafana interface
+
+To access the Grafana interface, you should execute this command on a terminal:
+
+```shell
+kubectl port-forward -n <namespace> service/lgtm-grafana 8080:80
+```
+
+Then you can access the Grafana interface on [localhost:8080](http://localhost:8080).
